@@ -1,0 +1,178 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+    background-color: #e3e3e3;
+    color: #2e7d32;
+}
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    width: 80px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.sensor {
+    background-color: #e0f2f1;
+    border: 1px solid #4caf50;
+    border-radius: 10px;
+    padding: 10px 20px;
+    width: 100%;
+    text-align: left;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#temperature {
+    color: red;
+}
+
+#humidity {
+    color: blue;
+}
+
+#luminosity {
+    background-color: #e0f2f1;
+	color:orange;
+}
+
+.luminosity-level {
+    display: none;
+    margin-left: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+}
+
+#high {
+    background-color: red;
+}
+
+#medium {
+    background-color: orange;
+}
+
+#low {
+    background-color: green;
+}
+
+#fetch-data-btn {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    width: 100%;
+}
+
+#fetch-data-btn:hover {
+    background-color: #388e3c;
+}
+
+#loading-message {
+    display: none;
+    font-size: 1em;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#progress-bar-container {
+    display: none;
+    width: 100%;
+    background-color: #c8e6c9;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+#progress-bar {
+    width: 0;
+    height: 20px;
+    background-color: #4caf50;
+    border-radius: 5px;
+    transition: width 1s ease-in-out;
+}
+
+#success-message {
+    display: none;
+    font-size: 1em;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2em;
+    }
+
+    .sensor {
+        font-size: 1em;
+        padding: 10px;
+    }
+
+    #fetch-data-btn {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+
+    #loading-message {
+        font-size: 0.9em;
+    }
+
+    #success-message {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.5em;
+    }
+
+    .sensor {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+
+    #fetch-data-btn {
+        font-size: 0.8em;
+        padding: 8px;
+    }
+
+    #loading-message {
+        font-size: 0.8em;
+    }
+
+    #success-message {
+        font-size: 0.8em;
+    }
+}
